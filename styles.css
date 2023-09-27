@@ -1,5 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital@0;1&family=Nunito+Sans:opsz@6..12&family=PT+Mono&family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital@0;1&family=Mooli&family=Nunito+Sans:opsz@6..12&family=PT+Mono&family=Ubuntu+Mono&display=swap');
 
+
+
+body{
+  overflow-x:hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  color: rgb(240, 240, 240);
+  font-family: 'Nunito Sans',sans-serif;
+  margin: 0%;
+  background-color:rgb(15, 15, 15);
+}
 
 /* Hide scrollbar for Chrome, Safari and Opera
 
@@ -44,6 +56,32 @@ body::-webkit-scrollbar {
   }
 }
 
+@keyframes sc-by{
+  from{
+    transform: translateX(150%);
+  }
+  to{
+    transform: translateX(50%);
+  }
+}
+
+@keyframes sc-by2{
+  from{
+    transform: translateX(50%);
+  }
+  to{
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes sc-by3{
+  from{
+    transform: translateX(-50%);
+  }
+  to{
+    transform: translateX(-150%);
+  }
+}
 
 #sparkle{
   animation: back-pan 2s linear infinite;
@@ -63,14 +101,43 @@ body::-webkit-scrollbar {
 }
 
 .hero{
-  height: 100vh;
   display: flex; 
   flex-direction: column; 
   align-items: center; 
 
-  border-style:none dashed none dashed; 
+  border-style:none dotted none dotted; 
   border-radius: 32px 32px 0 0;
   border-width: 2px;
+  position: relative;
+}
+
+.watermark{
+  position: absolute;
+  z-index: -1;
+  font-size: 1000%;
+  font-family: Nunito Sans;
+  color: rgb(10, 10, 10);
+}
+
+.watermark2{
+  position: absolute;
+  z-index: -1;
+  top: 25vh;
+  font-size: 1000%;
+  font-family: Nunito Sans;
+  color: rgb(10, 10, 10);
+}
+
+#sc1{
+  animation: sc-by 20s linear infinite;
+}
+
+#sc2{
+  animation: sc-by2 20s linear infinite;
+}
+
+#sc3{
+  animation: sc-by3 20s linear infinite;
 }
 
 .info{
@@ -80,19 +147,10 @@ body::-webkit-scrollbar {
 }
 
 .info>div{
-  width: 900px;
+  max-width: 900px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 50px;
   background-color: rgb(12, 12, 12);
   height: 700px;
-}
-body{
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-
-    color: rgb(240, 240, 240);
-    font-family: 'Nunito Sans',sans-serif;
-    margin: 0%;
-    background-color:rgb(10, 10, 10);
 }
