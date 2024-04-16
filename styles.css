@@ -83,6 +83,30 @@ body::-webkit-scrollbar {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  .name {
+    font-size:900%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .name {
+    font-size:500%;
+  }
+  #sparkle{
+    font-size:75%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .name {
+    font-size:400%;
+  }
+  #sparkle{
+    font-size:50%;
+  }
+}
+
 #sparkle{
   animation: back-pan 2s linear infinite;
   
@@ -99,6 +123,12 @@ body::-webkit-scrollbar {
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
 }
+
+.name{
+margin: 0; 
+font-family: 'Mooli';
+}
+
 
 .hero{
   display: flex; 
