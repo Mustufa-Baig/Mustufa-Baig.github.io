@@ -1,195 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital@0;1&family=Mooli&family=Nunito+Sans:opsz@6..12&family=PT+Mono&family=Ubuntu+Mono&family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,700&family=Poppins:ital,wght@1,300&display=swap');
 
-body{
-  overflow-x:hidden;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-
-  color: rgb(240, 240, 240);
-  font-family: 'Nunito Sans',sans-serif;
-  margin: 0%;
-  background-color:rgb(15, 15, 15);
+:root {
+    --lite: #01000A;
+    --darc: #EDEBFA;
+    --prim: #3622CE;
+    --acent: #73AF18;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera
+.cormorant-garamond-light {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
 
-*/
-body::-webkit-scrollbar {
-    display: none;
+  .cormorant-garamond-light-italic {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: italic;
   }
 
 
-
-/* width */
-::-webkit-scrollbar {
-  width: 6px;
+.cormorant-garamond-semibold {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 4px rgb(10, 10, 10); 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-color: rgb(70,70,70);
-  border-radius: 10px;
+.cormorant-garamond-bold-italic {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: italic;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background:rgb(60, 65, 245) ;
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
 }
 
-/* ------------------------ScrollBar-------------------------------*/
-  
-@keyframes back-pan{
-  from{
-    background-position: 0% center;
-  }
-  
-  to{
-      background-position: -200% center;
-  }
+.text-acent{
+    color:var(--acent);
+}
+.text-prim{
+    color:var(--prim);
+}
+.text-lite{
+    color:var(--lite);
+}
+.text-darc{
+    color:var(--darc);
+}
+.bg-acent{
+    background-color:var(--acent);
+}
+.bg-lite{
+    background-color:var(--lite);
+}
+.bg-darc{
+    background-color:var(--darc);
 }
 
-@keyframes sc-by{
-  from{
-    transform: translateX(150%);
-  }
-  to{
-    transform: translateX(50%);
-  }
+.link{
+    color:gray;
+    transition: all 0.5s;
+}
+.link:hover{
+    color:var(--lite);
 }
 
-@keyframes sc-by2{
-  from{
-    transform: translateX(50%);
-  }
-  to{
-    transform: translateX(-50%);
-  }
+#hero-div{
+    padding-left:5%;
+    width:70vw;
+    height:80vh;
 }
 
-@keyframes sc-by3{
-  from{
-    transform: translateX(-50%);
-  }
-  to{
-    transform: translateX(-150%);
-  }
+#cnt-nav{
+    padding-right:80px;
 }
 
-@media only screen and (min-width: 1000px) {
-  .name {
-    font-size:900%;
-  }
+.blr{
+    filter:blur(5px);
+    transition: all 2s;
+}
+
+.hidden{
+    opacity:0;
+    filter:blur(2px);
+    transform:translateY(100px);
+    transition: all 1.5s;
+}
+.show{
+    opacity:1;
+    filter:blur(0);
+    transform:translateY(0);
+}
+
+a{
+    text-decoration:none;
+    display: block;
+    position: relative;
+}
+h5>a:link, h5>a:visited {
+    color: var(--lite);
+    cursor: auto;
+}
+
+h5>a:link:active, h5>a:visited:active {
+    color: var(--lite);
+}
+
+h2>a:link, h2>a:visited {
+    color: var(--prim);
+    cursor: auto;
+}
+
+h2>a:link:active, h2>a:visited:active {
+    color: var(--prim);
+}
+
+h2{
+    font-size:100px;
+}
+#name-div>h2{
+    padding-right:10px;
+}
+
+
+@media only screen and (max-width: 865px) {
+    #name-div{
+        flex-direction:column;
+    }
+
+    #name-div>h2{
+        padding:0;
+        margin:0;
+    }
+
+    #cnt-nav{
+        padding-right:40px;
+    }
+
+    h2{
+        font-size:64px !important;
+    }
+
 }
 
 @media only screen and (max-width: 1000px) {
-  .name {
-    font-size:500%;
-  }
-  #sparkle{
-    font-size:75%;
-  }
+    #hero-div{
+        min-width:80%;
+    }
 }
 
-@media only screen and (max-width: 600px) {
-  .name {
-    font-size:400%;
-  }
-  #sparkle{
-    font-size:50%;
-  }
+@media only screen and (max-width: 1260px) {
+    #hero-div{
+        width:70%;
+    }
+    h2{
+        font-size:75px;
+    }
 }
 
-@media only screen and (max-width: 500px) {
-  .name {
-    font-size:320%;
-  }
-  #sparkle{
-    font-size:50%;
-  }
-}
-
-#sparkle{
-  animation: back-pan 2s linear infinite;
-  
-  background-image:linear-gradient(
-    to right,
-    rgb(61, 61, 255),
-    rgb(19, 180, 255),
-    rgb(61, 61, 255)
-    );
-  
-  background-size: 200%;
-  background-clip: unset;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color: transparent;
-  white-space: nowrap;
-}
-
-.name{
-margin: 0; 
-font-family: 'Mooli';
-}
-
-
-.hero{
-  display: flex; 
-  flex-direction: column; 
-  justify-content: space-between;
-  align-items: center;
-
-  border-style:none dotted none dotted; 
-  border-radius: 32px 32px 0 0;
-  border-width: 2px;
-  position: relative;
-  height: 100vh;
-}
-
-.watermark{
-  position: absolute;
-  z-index: -1;
-  font-size: 1000%;
-  font-family: "Anton";
-  color: rgb(10, 10, 10);
-}
-
-.watermark2{
-  position: absolute;
-  z-index: -1;
-  top: 30vh;
-  font-size: 1000%;
-  font-family: "Anton";
-  color: rgb(10, 10, 10);
-}
-
-#sc1{
-  animation: sc-by 20s linear infinite;
-}
-
-#sc2{
-  animation: sc-by2 20s linear infinite;
-}
-
-#sc3{
-  animation: sc-by3 20s linear infinite;
-}
-
-.info{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.info>div{
-  max-width: 900px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 50px;
-  background-color: rgb(12, 12, 12);
-  height: 700px;
-}
