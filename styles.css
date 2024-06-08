@@ -39,6 +39,26 @@
     font-style: italic;
 }
 
+.proj>hr{
+    padding:0;
+    margin:0;
+}
+.proj>h1>a{
+    color:gray;
+    padding: 10px 0;
+    margin:0;
+    transform: translateX(100px);
+    filter: blur(1px);
+    transition:all 0.25s;
+}
+
+.proj>h1>a:hover{
+    color:var(--lite);
+    filter: blur(0);
+    transform: translateX(150px);
+}
+
+
 .cursor-dot,
 .cursor-dot-outline {
     pointer-events: none;
@@ -110,11 +130,6 @@
     transition: all 2s;
 }
 
-.hi{
-    background-color:var(--lite);
-    opacity:0;
-    transition: all 1.5s;
-}
 
 .hidden{
     opacity:0;
@@ -133,22 +148,15 @@ a{
     display: block;
     position: relative;
 }
-h5>a:link, h5>a:visited {
+
+h5>a:link, h5>a:visited, h5>a:link:active, h5>a:visited:active{
     color: var(--lite);
     cursor: none;
 }
 
-h5>a:link:active, h5>a:visited:active {
-    color: var(--lite);
-}
-
-h2>a:link, h2>a:visited {
+h2>a:link, h2>a:visited, h2>a:link:active, h2>a:visited:active{
     color: var(--prim);
     cursor: none;
-}
-
-h2>a:link:active, h2>a:visited:active {
-    color: var(--prim);
 }
 
 h2{
