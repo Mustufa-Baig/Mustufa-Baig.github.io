@@ -1,4 +1,4 @@
-const once = new IntersectionObserver((entries)=>{
+const repeat = new IntersectionObserver((entries)=>{
     entries.forEach((entry)=>{
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
@@ -8,7 +8,7 @@ const once = new IntersectionObserver((entries)=>{
     });
 });
 
-const repeat = new IntersectionObserver((entries)=>{
+const once = new IntersectionObserver((entries)=>{
     entries.forEach((entry)=>{
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
@@ -20,8 +20,8 @@ const repeat = new IntersectionObserver((entries)=>{
 const hiddenEle = document.querySelectorAll('.hidden');
 const blr = document.querySelectorAll('.blr');
 
-hiddenEle.forEach((el) => once.observe(el));
-blr.forEach((el) => repeat.observe(el));
+hiddenEle.forEach((el) => repeat.observe(el));
+blr.forEach((el) => once.observe(el));
 
 
 
@@ -119,7 +119,7 @@ var cursor = {
         
         if (self.cursorEnlarged) {
             self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.8)';
         } else {
             self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
             self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
@@ -138,6 +138,8 @@ var cursor = {
         }
     }
 }
+
+
 
 cursor.init();
 

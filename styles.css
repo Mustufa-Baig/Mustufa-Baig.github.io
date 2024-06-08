@@ -7,6 +7,7 @@
     --acent: #73AF18;
 }
 
+
 .cormorant-garamond-light {
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
@@ -109,6 +110,12 @@
     transition: all 2s;
 }
 
+.hi{
+    background-color:var(--lite);
+    opacity:0;
+    transition: all 1.5s;
+}
+
 .hidden{
     opacity:0;
     filter:blur(2px);
@@ -169,7 +176,9 @@ h2{
     h2{
         font-size:64px !important;
     }
-
+    .snd-abt{
+    	display:none;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
