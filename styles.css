@@ -38,6 +38,32 @@
     font-style: italic;
 }
 
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.1s ease-in-out,
+                transform 0.1s ease-in-out;
+    z-index:10;
+}
+
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--lite);
+}
+
+.cursor-dot-outline {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--lite);
+}
+
 .text-acent{
     color:var(--acent);
 }
@@ -102,7 +128,7 @@ a{
 }
 h5>a:link, h5>a:visited {
     color: var(--lite);
-    cursor: auto;
+    cursor: none;
 }
 
 h5>a:link:active, h5>a:visited:active {
@@ -111,7 +137,7 @@ h5>a:link:active, h5>a:visited:active {
 
 h2>a:link, h2>a:visited {
     color: var(--prim);
-    cursor: auto;
+    cursor: none;
 }
 
 h2>a:link:active, h2>a:visited:active {
