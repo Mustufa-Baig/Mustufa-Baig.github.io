@@ -139,7 +139,9 @@ var cursor = {
     }
 }
 
+cursor.init();
 
-if (navigator.maxTouchPoints==0){
-	cursor.init();
+if (navigator.maxTouchPoints!=0){
+	document.querySelector(".cursor-dot").remove();
+	document.querySelector(".cursor-dot-outline").remove();
 }
