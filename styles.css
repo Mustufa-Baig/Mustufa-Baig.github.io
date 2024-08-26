@@ -8,6 +8,7 @@
 }
 
 
+
 .cormorant-garamond-light {
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
@@ -39,11 +40,13 @@
     font-style: italic;
 }
 
-.proj>hr{
-    padding:0;
-    margin:0;
+.proj>div{
+    border-top-style:solid;
+    border-width:1px;
+    border-color:gray;
 }
-.proj>h1>a{
+
+.proj>div>h1>a{
     color:gray;
     padding: 10px 0;
     margin:0;
@@ -52,7 +55,7 @@
     transition:all 0.25s;
 }
 
-.proj>h1>a:hover{
+.proj>div>h1>a:hover{
     color:var(--lite);
     filter: blur(0);
     transform: translateX(150px);
@@ -115,6 +118,39 @@
     color:var(--lite);
 }
 
+.bt{
+    background-color:var(--darc);
+    color:var(--lite);
+    transition: all 0.5s;
+}
+.bt:hover{
+    background-color:var(--prim);
+    color:var(--darc);
+}
+
+input{
+    color:var(--prim);
+    overflow:visible;
+}
+
+body::before,
+body::after{
+    position:fixed;
+    left:0;
+    top:0;
+    content:'';
+    width:100%;
+    height:100%;
+    z-index:9999;
+    pointer-events:none;
+
+    opacity:40%;
+}
+body::before{
+    background:#000000;
+    filter: url(#grainy);
+}
+
 #hero-div{
     padding-left:5%;
     width:70vw;
@@ -167,6 +203,26 @@ h2{
 }
 
 
+@media only screen and (max-width: 600px) {
+
+    .sbt{
+        justify-content:left !important;
+        padding-left:10px;
+        margin-top:20px;
+    }
+    .con{
+        padding-left:25px;
+        justify-content:left !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .cont>div>h1{
+        display:none;
+    }
+}
+
 @media only screen and (max-width: 865px) {
     #name-div{
         flex-direction:column;
@@ -193,6 +249,13 @@ h2{
     #hero-div{
         min-width:80%;
     }
+    input{
+        width:400px !important;
+        margin-bottom:50px !important;
+    }
+    .cont>div>h1,input{
+        font-size:24px !important;
+    }
 }
 
 @media only screen and (max-width: 1260px) {
@@ -203,4 +266,3 @@ h2{
         font-size:75px;
     }
 }
-

@@ -53,7 +53,7 @@ var cursor = {
         var self = this;
 
         // Anchor hovering
-        document.querySelectorAll('a').forEach(function(el) {
+        document.querySelectorAll('a,input,button').forEach(function(el) {
             el.addEventListener('mouseover', function() {
                 self.cursorEnlarged = true;
                 self.toggleCursorSize();
@@ -98,7 +98,7 @@ var cursor = {
             self.$dot.style.top = self.endY + 'px';
             self.$dot.style.left = self.endX + 'px';
         });
-	
+
         // Hide/show cursor
         document.addEventListener('mouseenter', function(e) {
             self.cursorVisible = true;
