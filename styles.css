@@ -61,7 +61,6 @@
     transform: translateX(150px);
 }
 
-
 .cursor-dot,
 .cursor-dot-outline {
     pointer-events: none;
@@ -73,7 +72,8 @@
     transform: translate(-50%, -50%);
     transition: opacity 0.1s ease-in-out,
                 transform 0.1s ease-in-out;
-    z-index:10;
+
+    z-index:999;
 }
 
 .cursor-dot {
@@ -133,6 +133,22 @@ input{
     overflow:visible;
 }
 
+@keyframes grainy {
+    0% {
+        filter: url(#grain1);
+    }
+    33% {
+        filter: url(#grain2);
+    }
+    66% {
+        filter: url(#grain3);
+    }
+    100% {
+        filter: url(#grain1);
+    }
+}
+
+
 body::before,
 body::after{
     position:fixed;
@@ -141,14 +157,14 @@ body::after{
     content:'';
     width:100%;
     height:100%;
-    z-index:9999;
+    z-index:1000;
     pointer-events:none;
 
     opacity:40%;
 }
 body::before{
     background:#000000;
-    filter: url(#grainy);
+    animation:grainy 1s infinite;
 }
 
 #hero-div{

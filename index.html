@@ -97,7 +97,7 @@
         <h2 class="mx-5 cormorant-garamond-bold-italic" style="margin-top:200px">Get in touch</h2>
         <hr>
         <section class="d-flex flex-row justify-content-center con" style="margin-top:50px; margin-bottom:50px">
-            <form action="https://api.web3forms.com/submit" method="POST" class="d-flex flex-column cont" autocomplete="off">
+            <form method="POST" id="form" class="d-flex flex-column cont" autocomplete="off">
                 <input type="hidden" name="access_key" value="df2f6f27-cae0-47be-b6b1-13ada5014817">
 
                 <div class="d-flex flex-row align-items-end">
@@ -125,21 +125,96 @@
                 <div class="d-flex flex-row-reverse sbt">
                     <button type="submit" style="width:150px; height:50px; font-size:20px;" class="my-1 rounded-pill bt">Send</button>
                 </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <div id="result" class="d-flex flex-row justify-content-center poppins-light-italic bg-lite text-darc rounded-pill" style="font-size:32px; width:450px; display:none !important;">Hi!</div>
+                </div>
             </form>
         </section>
 
+
+
+        <script>
+        const form = document.getElementById('form');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+          result.style.display="inline";
+          result.innerHTML = "Please wait..."
+
+            fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "Sent!";
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function() {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.setProperty("display", "none", "important");
+                    }, 3000);
+                });
+        });
+        </script>
+
+
+
         <svg>
-            <filter id="grainy">
+            <filter id="grain1">
                 <feTurbulence
                     type="fractalNoise"
                     baseFrequency="0.9"
                     numOctaves="10"
+                    seed="1"
                 />
                 <feColorMatrix
                     type="saturate"
                     values="0"
                 />
             </filter>
+            <filter id="grain2">
+                <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0.9"
+                    numOctaves="10"
+                    seed="2"
+                />
+                <feColorMatrix
+                    type="saturate"
+                    values="0"
+                />
+            </filter>
+            <filter id="grain3">
+                <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0.9"
+                    numOctaves="10"
+                    seed="3"
+                />
+                <feColorMatrix
+                    type="saturate"
+                    values="0"
+                />
+            </filter>
+
         </svg>
 
     </body>
