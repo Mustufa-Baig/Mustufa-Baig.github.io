@@ -23,7 +23,7 @@ const blr = document.querySelectorAll('.blr');
 hiddenEle.forEach((el) => repeat.observe(el));
 blr.forEach((el) => once.observe(el));
 
-
+document.body.style.cursor = 'none';
 
 
 
@@ -53,7 +53,7 @@ var cursor = {
         var self = this;
 
         // Anchor hovering
-        document.querySelectorAll('a,input,button').forEach(function(el) {
+        document.querySelectorAll('a,input,button,#img_').forEach(function(el) {
             el.addEventListener('mouseover', function() {
                 self.cursorEnlarged = true;
                 self.toggleCursorSize();
@@ -131,7 +131,7 @@ var cursor = {
 
         if (self.cursorEnlarged) {
             self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.8)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(2.5)';
         } else {
             self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
             self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';

@@ -17,12 +17,12 @@
 	<div class="cursor-dot"></div>
 
         <!--Navbar-->
-        <div class="d-flex justify-content-between align-items-center bg-darc m-0 p-0" style="height:7vh; width:100vw;">
+        <div class="navbar bg-darc m-0 p-0 border-bottom border-dark" style="height:7vh; width:100vw; position:fixed; top:0px; z-index:99;">
             <h5><a class="cormorant-garamond-bold-italic px-5 " href="#">Mustafa Baig</a></h5>
 
             <div class="d-flex" id="cnt-nav">
-                <h5 class="cormorant-garamond-bold-italic link">WORK</h5>
-                <h5 class="cormorant-garamond-bold-italic link" style="margin-left:40px;">CONTACT</h5>
+                <h5 class="cormorant-garamond-bold-italic"><a href="projects.html" style="color:gray !important;">WORK</a></h5>
+                <h5 class="cormorant-garamond-bold-italic link" style="margin-left:40px;"><a href="#contact" style="color:gray !important;">CONTACT</a></h5>
             </div>
         </div>
 
@@ -46,12 +46,12 @@
         <!--Tagline-->
         <hr class="m-0 p-0">
         <section class="py-5 m-0">
-            <h1 class="text-lite poppins-light-italic" style="text-align:center; font-size:64px">EXPLORING EVERY NICHE</h1>
+            <h1 class="text-lite poppins-light-italic" style="text-align:center; font-size:64px" id="about">EXPLORING EVERY NICHE</h1>
         </section>
 
 
         <!--About me-->
-        <section class="d-flex justify-content-center hidden" id="about">
+        <section class="d-flex justify-content-center hidden">
             <div style="width:75%;">
                 <hr class="bg-darc my-5 p-0">
 
@@ -60,7 +60,7 @@
 		</h4>
 
 		<h4 class="text-lite poppins-light-italic lh-base my-5 snd-abt">
-				  I stumbled across programming at a very young age and have been intrigued by it ever since, which is one of the reasons why I chose CS as a career option. My goal is to learn as many specializations of computer science as possible and be an expert at all of them.
+				  I stumbled across programming at a very young age and have been intrigued by it ever since, which is one of the reasons why I chose CS as a career option. My goal is to learn as many specializations of computer science as possible and be an expert at most of them.
                 </h4>
 
                 <hr class="bg-darc my-5 p-0">
@@ -73,7 +73,7 @@
         <section class="d-flex flex-column align-items-center">
             <div class="w-100 proj">
                 <div class="hidden">
-                    <h1><a class="poppins-light-italic">INTERIOR RENDERS</a></h1>
+                    <h1><a class="poppins-light-italic">TAC ENGINE</a></h1>
                 </div>
 
                 <div class="hidden">
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="hidden">
-                    <h1><a class="poppins-light-italic">TAC ENGINE</a></h1>
+                    <h1><a class="poppins-light-italic">INTERIOR RENDERS</a></h1>
                 </div>
 
                 <div class="hidden" style="border-bottom-style:solid;">
@@ -94,7 +94,7 @@
 
 
         <!--Contact-->
-        <h2 class="mx-5 cormorant-garamond-bold-italic" style="margin-top:200px">Get in touch</h2>
+        <h2 class="mx-5 cormorant-garamond-bold-italic" style="margin-top:200px" id="contact">Get in touch</h2>
         <hr>
         <section class="d-flex flex-row justify-content-center con" style="margin-top:50px; margin-bottom:50px">
             <form method="POST" id="form" class="d-flex flex-column cont" autocomplete="off">
@@ -176,23 +176,7 @@
         </script>
 
 
-	<!-- Default Statcounter code for Portfolio https://mustufa-baig.github.io -->
-	<script type="text/javascript">
-	var sc_project=12952419;
-	var sc_invisible=1;
-	var sc_security="d4e24f12";
-	</script>
-	<script type="text/javascript"
-	src="https://www.statcounter.com/counter/counter.js"
-	async></script>
-	<noscript><div class="statcounter"><a title="free hit
-	counter" href="https://statcounter.com/"
-	target="_blank"><img class="statcounter"
-	src="https://c.statcounter.com/12952419/0/d4e24f12/1/"
-	alt="free hit counter"
-	referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-	<!-- End of Statcounter Code -->
-	    
+
         <svg>
             <filter id="grain1">
                 <feTurbulence
