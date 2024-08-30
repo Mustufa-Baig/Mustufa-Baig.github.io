@@ -40,6 +40,9 @@
     font-style: italic;
 }
 
+.proj{
+    width:100%;
+}
 .proj>div{
     border-top-style:solid;
     border-width:1px;
@@ -50,6 +53,8 @@
     color:gray;
     padding: 10px 0;
     margin:0;
+    width:50vw;
+
     transform: translateX(100px);
     filter: blur(1px);
     transition:all 0.25s;
@@ -314,13 +319,46 @@ h2{
     padding-right:10px;
 }
 
+
+@media only screen and (max-width: 350px) {
+    .cont>div>input{
+        font-size:18px !important;
+        width:320px !important;
+        padding:0px !important;
+        margin:0px !important;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 450px) {
+    .cont>div>input{
+        font-size:18px !important;
+        width:320px !important;
+        padding:0px !important;
+        margin:10px !important;
+    }
+}
+
+
 @media only screen and (max-width: 450px) {
 
     #name-div{
         flex-direction:column !important;
     }
 
-    
+    .con{
+        padding:0px !important;
+        margin:0px !important;
+    }
+
+    #contact{
+        margin-right:0px !important;
+        margin-left:10px !important;
+    }
+
+    #about{
+        font-size:32px !important;
+    }
+
     .work>div{
         flex-direction:column !important;
         align-items:center;
