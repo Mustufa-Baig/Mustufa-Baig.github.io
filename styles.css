@@ -338,6 +338,12 @@ h2{
 }
 
 
+@media only screen and (max-width: 320px) {
+    #cnt-nav{
+        display:none !important;
+    }
+}
+
 @media only screen and (max-width: 350px) {
     .cont>div>input{
         font-size:18px !important;
@@ -549,6 +555,21 @@ h2{
 @media only screen and (max-width: 865px) {
     .snd-abt{
     	display:none;
+    }
+    .description{
+        flex-direction:column !important;
+    }
+    .description>div{
+        margin-left:20px !important;
+        margin-top:25px !important;
+        width:fit-content !important;
+    }
+    .proj-name{
+        margin-left:auto !important;
+        margin-right:auto !important;
+    }
+    .extra-des{
+        display:none !important;
     }
 }
 @media only screen and (min-width: 626px) and (max-width: 865px) {
