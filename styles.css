@@ -15,7 +15,7 @@
     font-style: normal;
   }
 
-  .cormorant-garamond-light-italic {
+.cormorant-garamond-light-italic {
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
     font-style: italic;
@@ -40,10 +40,26 @@
     font-style: italic;
 }
 
-.proj{
-    width:100vw !important;
+.foot>div>h4{
+    font-size:25px;
+    color:white;
+    padding-left:5px;
+    margin-bottom:20px;
 }
 
+.foot>div>a{
+    font-size:20px;
+    color:gray;
+    padding-left:5px;
+}
+.foot>div>a:hover{
+    color:white;
+}
+
+
+.proj{
+    width:100%;
+}
 .proj>div{
     border-top-style:solid;
     border-width:1px;
@@ -301,6 +317,7 @@ a{
     text-decoration:none;
     display: block;
     position: relative;
+    cursor:none !important;
 }
 
 h5>a:link, h5>a:visited, h5>a:link:active, h5>a:visited:active{
@@ -390,6 +407,7 @@ h2{
 
     .navbar>div{
         padding:0 !important;
+        margin-right:20px !important;
     }
 
     .work{
@@ -423,9 +441,34 @@ h2{
 
 
     .work>div>div>h4{
-        font-size:18px;
+        font-size:20px;
         top: -30px;
     }
+
+    .mail-name{
+        font-size:24px !important;
+    }
+
+    .whatsapp-no{
+        font-size:18px !important;
+    }
+    .centred{
+        margin-left:auto !important;
+        margin-right:auto !important;
+    }
+
+    .foot{
+        flex-direction:column !important;
+        align-items:center !important;
+    }
+    .foot>div{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:auto !important;
+        margin-bottom:30px !important;
+    }
+
 }
 @media only screen and (max-width: 600px) {
 
@@ -443,6 +486,13 @@ h2{
 @media only screen and (min-width:451px) and (max-width: 625px) {
     .work>div>div{
         width:400px;
+    }
+
+    .mail-name{
+        font-size:32px !important;
+    }
+    .whatsapp-no{
+        font-size:24px !important;
     }
 
     #name-div{
@@ -477,11 +527,23 @@ h2{
 
 }
 
+@media only screen and (max-width: 665px) {
+    .foot>div>h3{
+        font-size:18px;
+    }
+    .foot>div>h1{
+        font-size:28px;
+    }
+
+}
+
 @media only screen and (max-width: 800px) {
 
     .cont>div>h1{
         display:none;
     }
+
+
 }
 
 @media only screen and (max-width: 865px) {
@@ -489,10 +551,13 @@ h2{
     	display:none;
     }
 }
-
 @media only screen and (min-width: 626px) and (max-width: 865px) {
     #name-div{
         flex-direction:column;
+    }
+
+    .mail-name{
+        font-size:48px !important;
     }
 
     #name-div>h2{
@@ -507,6 +572,7 @@ h2{
     h2{
         font-size:64px !important;
     }
+
 
     .work>div>div{
         width:300px !important;
