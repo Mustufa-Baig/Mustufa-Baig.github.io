@@ -313,6 +313,71 @@ body::before{
     justify-content:space-between;
 }
 
+.catalog>div>div>h4{
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size:24px;
+}
+
+.catalog>div>div>h1{
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size:18px;
+}
+
+.catalog>div>div{
+    border:2px solid black;
+    border-radius:27px;
+    overflow:hidden;
+
+    background-color:black;
+
+    display: inline-block;
+    position: relative;
+
+
+    margin-top:20px;
+    padding:0;
+
+    color:transparent;
+    transition: all 0.5s;
+}
+
+.catalog>div>div>img,video{
+    border-radius:25px;
+    object-fit:cover;
+    width:45vw;
+    margin:0;
+
+    transition: all 0.5s;
+}
+.catalog>div>div>img{
+    height:auto;
+    display: block;
+}
+.catalog>div>div>video{
+    height:calc(45vw*0.75);
+}
+
+.catalog>div>div>img:hover,video:hover{
+    opacity:0.35;
+}
+
+.catalog>div>div:hover{
+    color:white;
+}
+
+
 a{
     text-decoration:none;
     display: block;
