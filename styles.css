@@ -353,7 +353,7 @@ body::before{
     transition: all 0.5s;
 }
 
-.catalog>div>div>img video{
+.catalog>div>div>img{
     border-radius:25px;
     object-fit:cover;
     width:45vw;
@@ -361,6 +361,16 @@ body::before{
 
     transition: all 0.5s;
 }
+
+.catalog>div>div>video{
+    border-radius:25px;
+    object-fit:cover;
+    width:45vw;
+    margin:0;
+
+    transition: all 0.5s;
+}
+
 .catalog>div>div>img{
     height:auto;
     display: block;
@@ -369,7 +379,10 @@ body::before{
     height:calc(45vw*0.75);
 }
 
-.catalog>div>div>img:hover video:hover{
+.catalog>div>div>img:hover{
+    opacity:0.35;
+}
+.catalog>div>div>video:hover{
     opacity:0.35;
 }
 
