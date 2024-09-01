@@ -277,8 +277,8 @@ body::before{
 
 
 .work>div>div>h1{
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
     font-style: italic;
 
     color:white;
@@ -313,15 +313,24 @@ body::before{
     justify-content:space-between;
 }
 
+.work>div>div>:is(h1,h4){
+    pointer-events:none;
+}
+
+
+.catalog>div>div>:is(h1,h4){
+    pointer-events:none;
+}
+
 .catalog>div>div>h4{
     position: absolute;
     bottom: 50px;
     left: 20px;
 
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
     font-style: italic;
-    font-size:24px;
+    font-size:64px;
 }
 
 .catalog>div>div>h1{
@@ -353,36 +362,29 @@ body::before{
     transition: all 0.5s;
 }
 
-.catalog>div>div>img{
+
+.catalog>div>div>a>:is(img,video),.cat-col{
+    width:45vw;
+}
+
+.catalog>div>div>a>:is(img,video){
     border-radius:25px;
     object-fit:cover;
-    width:45vw;
     margin:0;
 
     transition: all 0.5s;
 }
 
-.catalog>div>div>video{
-    border-radius:25px;
-    object-fit:cover;
-    width:45vw;
-    margin:0;
 
-    transition: all 0.5s;
-}
-
-.catalog>div>div>img{
+.catalog>div>div>a>img{
     height:auto;
     display: block;
 }
-.catalog>div>div>video{
+.catalog>div>div>a>video,.v-cover{
     height:calc(45vw*0.75);
 }
 
-.catalog>div>div>img:hover{
-    opacity:0.35;
-}
-.catalog>div>div>video:hover{
+.catalog>div>div>a>:is(img:hover,video:hover){
     opacity:0.35;
 }
 
@@ -398,12 +400,12 @@ a{
     cursor:none !important;
 }
 
-h5>a:link, h5>a:visited, h5>a:link:active, h5>a:visited:active{
+h5>:is(a:link,a:visited,a:link:active,a:visited:active){
     color: var(--lite);
     cursor: none;
 }
 
-h2>a:link, h2>a:visited, h2>a:link:active, h2>a:visited:active{
+h2>:is(a:link,a:visited,a:link:active,a:visited:active){
     color: var(--prim);
     cursor: none;
 }
@@ -429,6 +431,16 @@ h2{
         padding:0px !important;
         margin:0px !important;
     }
+
+
+    .catalog>div>div>a>:is(img,video),.cat-col{
+        width:95vw !important;
+    }
+
+    .catalog>div>div>a>video,.v-cover{
+        height:calc(95vw*0.75) !important;
+    }
+
 }
 
 @media only screen and (min-width: 351px) and (max-width: 450px) {
@@ -553,6 +565,14 @@ h2{
         margin-bottom:30px !important;
     }
 
+    .catalog>div>div>h4{
+        bottom:75px !important;
+    }
+
+    .catalog>div>div>h1{
+        font-size: 14px;
+    }
+
 }
 @media only screen and (max-width: 600px) {
 
@@ -565,6 +585,34 @@ h2{
         padding-left:25px;
         justify-content:left !important;
     }
+
+    .catalog{
+        flex-direction:column-reverse !important;
+        align-items:center !important;
+    }
+
+    .catalog>div>div>a>:is(img,video){
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    }
+
+    .catalog>div>div>a>:is(img,video),.cat-col{
+        width:75vw;
+
+    }
+
+    .catalog>div>div>a>video,.v-cover{
+        height:calc(45vw*0.75);
+    }
+
+    .catalog>div>div>:is(h1,h4){
+        color:white !important;
+        mix-blend-mode:exclusion;
+    }
+
+    #extra-bento{
+        display:none;
+    }
+
 }
 
 @media only screen and (min-width:451px) and (max-width: 625px) {
@@ -627,7 +675,10 @@ h2{
         display:none;
     }
 
-
+    .catalog>div>div>h4{
+        bottom:100px;
+        font-size:32px;
+    }
 }
 
 @media only screen and (max-width: 865px) {
@@ -736,5 +787,12 @@ h2{
     .work>div>div>div>a>img{
         width:400px;
         height:300px;
+    }
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 1370px) {
+    .catalog>div>div>h4{
+        bottom:100px;
     }
 }
