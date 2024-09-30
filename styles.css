@@ -137,40 +137,6 @@ input{
     overflow:visible;
 }
 
-@keyframes grainy {
-    0% {
-        filter: url(#grain1);
-    }
-    33% {
-        filter: url(#grain2);
-    }
-    66% {
-        filter: url(#grain3);
-    }
-    100% {
-        filter: url(#grain1);
-    }
-    
-}
-
-
-body::before,
-body::after{
-    position:fixed;
-    left:0;
-    top:0;
-    content:'';
-    width:100%;
-    height:100%;
-    z-index:1000;
-    pointer-events:none;
-
-    opacity:30%;
-}
-body::before{
-    background:#000000;
-    animation:grainy 1s infinite;
-}
 
 #hero-div{
     padding-left:5%;
